@@ -4,9 +4,13 @@ import os
 from dotenv import load_dotenv
 import logging
 
+
+# Set up your app environment 
 app = Flask(__name__, template_folder='templates')
 load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
+
+
 
 # Set up root root_logger 
 root_logger = logging.getLogger(__name__)
@@ -28,12 +32,16 @@ console_handler.setFormatter(console_handler_log_formatter)
 root_logger.addHandler(file_handler)
 root_logger.addHandler(console_handler)
 
+
+
+
 @app.route('/')
-def index():
+def render_index():
     return render_template('index.html')
 
+
 @app.route('/chat', methods=['POST'])
-def chat():
+def render_chat():
     user_input = request.form['text']
     root_logger.removeHandler(console_handler)
     root_logger.info(f':: Me (SDW):   {user_input}' )
