@@ -10,22 +10,23 @@ root_logger.setLevel(logging.DEBUG)
 
 
 # Set up formatter for logs 
-log_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s  ')
+file_handler_log_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s  ')
+console_handler_log_formatter = logging.Formatter('%(message)s ')
 
 
 # Set up file handler object for logging events to file
 file_handler = logging.FileHandler('chatgpt_conversation_history.log', mode='w')
-file_handler.setFormatter(log_formatter)
+file_handler.setFormatter(file_handler_log_formatter)
 
 
 # Set up console handler object for writing event logs to console in real time (i.e. streams events to stderr)
 console_handler = logging.StreamHandler()
-console_handler.setFormatter(log_formatter)
+console_handler.setFormatter(console_handler_log_formatter)
 
 
 # Add the file and console handlers 
 root_logger.addHandler(file_handler)
-root_logger.addHandler(logging.StreamHandler())
+root_logger.addHandler(console_handler)
 
 
 
@@ -50,7 +51,14 @@ def generate_chatgpt_responses(prompt):
 
 # Run ChatGPT 
 while True:
+    root_logger.debug('')
     user_input=input('::Me: ')
+    root_logger.debug('--------------------------------------------------')
+
+    root_logger.removeHandler(console_handler)
     root_logger.info(f'::Me: {user_input}' )
+    root_logger.addHandler(console_handler)
+
     chatgpt_response = generate_chatgpt_responses(user_input)
     root_logger.info('::ChatGPT: ', chatgpt_response)
+    root_logger.debug('--------------------------------------------------')
