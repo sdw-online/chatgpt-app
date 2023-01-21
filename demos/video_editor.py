@@ -5,7 +5,7 @@ import os
 
 
 load_dotenv()
-
+ 
 
 src_vid_1 = os.getenv('CHATGPT_SRC_DEMO_1')
 src_vid_2 = os.getenv('CHATGPT_SRC_DEMO_2')
@@ -33,12 +33,12 @@ clip = clip.set_fps(fps*2)
 
 
 # Select the first 30 seconds of the sped up video
-clip_30s = clip.subclip(0,30)
+clip_25s = clip.subclip(0,25)
 
 
 
 # Save the new video file
-clip_30s.write_videofile(tgt_vid_1)
+clip_25s.write_videofile(tgt_vid_1)
 
 
 
