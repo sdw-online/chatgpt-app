@@ -1,0 +1,56 @@
+import openai
+import os
+from dotenv import load_dotenv
+import logging 
+
+
+# Set up root root_logger 
+root_logger = logging.getLogger(__name__)
+root_logger.setLevel(logging.DEBUG)
+
+
+# Set up formatter for logs 
+log_formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s  ')
+
+
+# Set up file handler object for logging events to file
+file_handler = logging.FileHandler('chatgpt_conversation_history.log', mode='w')
+file_handler.setFormatter(log_formatter)
+
+
+# Set up console handler object for writing event logs to console in real time (i.e. streams events to stderr)
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(log_formatter)
+
+
+# Add the file and console handlers 
+root_logger.addHandler(file_handler)
+root_logger.addHandler(logging.StreamHandler())
+
+
+
+# Load API key from environment variables 
+load_dotenv()
+openai.api_key = os.getenv('OPENAI_API_KEY')
+
+
+# Generate ChatGPT responses to console
+def generate_chatgpt_responses(prompt):
+    chatgpt_response = openai.Completion.create(
+        engine="text-davinci-002",
+        prompt=prompt,
+        max_tokens=1024,
+        n=1,
+        stop=None,
+        temperature=0.5,
+    )
+
+    return chatgpt_response["choices"][0]["text"]
+
+
+# Run ChatGPT 
+while True:
+    user_input=input('::Me: ')
+    root_logger.info(f'::Me: {user_input}' )
+    chatgpt_response = generate_chatgpt_responses(user_input)
+    root_logger.info('::ChatGPT: ', chatgpt_response)
