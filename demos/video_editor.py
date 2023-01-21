@@ -55,14 +55,14 @@ fps = clip.fps
 
 
 # Set the fps to be 2 times the current fps
-clip = clip.set_fps(fps*2)
+clip = clip.set_fps(fps*5)
 
 
 
-# Select the first 30 seconds of the sped up video
-clip_30s = clip.subclip(0,30)
+# # Select the first 45 seconds of the sped up video
+# clip_30s = clip.subclip(0,45)
 
 
 
 # Save the new video file
-clip_30s.write_videofile(tgt_vid_2)
+clip.write_videofile(tgt_vid_2)
