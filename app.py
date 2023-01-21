@@ -35,17 +35,19 @@ load_dotenv()
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
 
-# Generate ChatGPT responses to console
+
+# # Generate ChatGPT responses to console
 def generate_chatgpt_responses(prompt):
     chatgpt_response = openai.Completion.create(
-        engine="text-davinci-002",
-        prompt=prompt,
-        max_tokens=1024,
-        n=1,
-        stop=None,
-        temperature=0.5,
-    )
-
+    model="text-davinci-003",
+    prompt=prompt,
+    temperature=0.3,
+    max_tokens=1000,
+    top_p=1.0,
+    frequency_penalty=0,
+    presence_penalty=0
+)
+    
     return chatgpt_response["choices"][0]["text"]
 
 
