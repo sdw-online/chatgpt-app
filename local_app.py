@@ -55,8 +55,12 @@ def generate_chatgpt_responses(prompt):
 while True:
     user_input=input(':: Me: ')
 
+    root_logger.removeHandler(file_handler)
     root_logger.removeHandler(console_handler)
+
     root_logger.info(f':: Me: {user_input}' )
+    
+    root_logger.addHandler(file_handler)
     root_logger.addHandler(console_handler)
 
     chatgpt_response = generate_chatgpt_responses(user_input)
