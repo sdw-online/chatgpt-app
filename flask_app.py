@@ -36,12 +36,12 @@ root_logger.addHandler(console_handler)
 
 
 @app.route('/')
-def render_index():
+def render_index_html():
     return render_template('index.html')
 
 
 @app.route('/chat', methods=['POST'])
-def render_chat():
+def render_chat_with_chatgpt():
     user_input = request.form['text']
     root_logger.removeHandler(console_handler)
     root_logger.info(f':: Me (SDW):   {user_input}' )
