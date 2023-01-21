@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+2023-01-21 06:03:52,932 - INFO - :: Me:   are you sentient?  
+2023-01-21 06:03:54,018 - INFO - :: ChatGPT: 
+
+No, I am not sentient.    
+2023-01-21 06:03:54,019 - DEBUG - --------------------------------------------------  
+2023-01-21 06:07:11,462 - INFO - :: Me:   does this work?  
+2023-01-21 06:07:12,769 - INFO - :: ChatGPT: 
+
+It depends on what you are trying to do. Please provide more information so we can better assist you.    
+2023-01-21 06:07:12,770 - DEBUG - --------------------------------------------------  
+=======
 2023-01-21 17:24:10,301 - INFO - :: Me (SDW):   Explain how many stars are in the universe  
 2023-01-21 17:24:14,497 - INFO - :: ChatGPT: 
 
@@ -23,3 +35,4 @@ The singularity is a point in space-time where the laws of physics break down, a
 
 If a human were to approach a black hole, they would be pulled in by the immense gravitational force of the black hole and would eventually be crushed by the immense gravity. It is impossible to escape a black hole once you are within its event horizon.    
 2023-01-21 17:26:59,773 - DEBUG - --------------------------------------------------  
+>>>>>>> stephen-dev-branch-02

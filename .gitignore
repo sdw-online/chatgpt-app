@@ -1,4 +1,8 @@
 # [Files] 
 
+<<<<<<< HEAD
+.env
+=======
 .env
 /chat-gpt/demos/src/
+>>>>>>> stephen-dev-branch-02
