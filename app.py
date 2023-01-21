@@ -51,16 +51,14 @@ def generate_chatgpt_responses(prompt):
     return chatgpt_response["choices"][0]["text"]
 
 
-# Run ChatGPT 
+# Run ChatGPT using an infinite loop
 while True:
-    root_logger.debug('')
-    user_input=input('::Me: ')
-    root_logger.debug('--------------------------------------------------')
+    user_input=input(':: Me: ')
 
     root_logger.removeHandler(console_handler)
-    root_logger.info(f'::Me: {user_input}' )
+    root_logger.info(f':: Me: {user_input}' )
     root_logger.addHandler(console_handler)
 
     chatgpt_response = generate_chatgpt_responses(user_input)
-    root_logger.info('::ChatGPT: ', chatgpt_response)
+    root_logger.info(f':: ChatGPT: {chatgpt_response}  ')
     root_logger.debug('--------------------------------------------------')

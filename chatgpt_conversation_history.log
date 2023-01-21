@@ -1,0 +1,19 @@
+2023-01-21 05:18:03,081 - DEBUG -   
+2023-01-21 05:18:05,844 - INFO - :: Me: Hello!  
+2023-01-21 05:18:06,938 - INFO - :: ChatGPT: 
+
+I hope you are doing well. How can I help you?    
+2023-01-21 05:18:06,938 - DEBUG - --------------------------------------------------  
+2023-01-21 05:18:06,938 - DEBUG -   
+2023-01-21 05:18:42,022 - INFO - :: Me: How many planets are in our solar system?  
+2023-01-21 05:18:45,543 - INFO - :: ChatGPT: 
+
+There are eight planets in our solar system: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus, and Neptune.    
+2023-01-21 05:18:45,544 - DEBUG - --------------------------------------------------  
+2023-01-21 05:18:45,544 - DEBUG -   
+2023-01-21 05:18:56,352 - INFO - :: Me: What about Pluto?  
+2023-01-21 05:18:57,502 - INFO - :: ChatGPT: 
+
+Pluto is no longer considered a planet. In 2006, the International Astronomical Union (IAU) reclassified Pluto as a dwarf planet.    
+2023-01-21 05:18:57,502 - DEBUG - --------------------------------------------------  
+2023-01-21 05:18:57,503 - DEBUG -   
