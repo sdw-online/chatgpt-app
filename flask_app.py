@@ -36,7 +36,7 @@ def index():
 def chat():
     user_input = request.form['text']
     root_logger.removeHandler(console_handler)
-    root_logger.info(f':: Me:   {user_input}' )
+    root_logger.info(f':: Me (SDW):   {user_input}' )
     root_logger.addHandler(console_handler)
     chatgpt_response = openai.Completion.create(
         model="text-davinci-003",

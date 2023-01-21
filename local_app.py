@@ -53,12 +53,12 @@ def generate_chatgpt_responses(prompt):
 
 # Run ChatGPT using an infinite loop
 while True:
-    user_input=input(':: Me: ')
+    user_input=input(':: Me (SDW): ')
 
     root_logger.removeHandler(file_handler)
     root_logger.removeHandler(console_handler)
 
-    root_logger.info(f':: Me: {user_input}' )
+    root_logger.info(f':: Me (SDW): {user_input}' )
     
     root_logger.addHandler(file_handler)
     root_logger.addHandler(console_handler)
