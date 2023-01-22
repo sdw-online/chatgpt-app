@@ -1,7 +1,8 @@
-from moviepy.editor import VideoFileClip
-from moviepy.video.fx import speedx
-from dotenv import load_dotenv
 import os 
+from dotenv import load_dotenv
+from moviepy.video.fx import speedx
+from moviepy.editor import VideoFileClip
+
 
 
 # Add environment variables 
@@ -23,6 +24,7 @@ RUN_CHATGPT_DEMO_VID_2 = True
 # ============ DEMO VID 1 =============
 
 if RUN_CHATGPT_DEMO_VID_1:
+
     # Open the video file
     clip = VideoFileClip(src_vid_1)
 
@@ -51,6 +53,7 @@ if RUN_CHATGPT_DEMO_VID_1:
 # ============ DEMO VID 2 =============
 
 if RUN_CHATGPT_DEMO_VID_2:
+    
     # Open the video file
     clip = VideoFileClip(src_vid_2)
 
