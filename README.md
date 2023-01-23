@@ -2,13 +2,17 @@
 
 # Preface
 
-- First of all, what is ChatGPT?
+A few days ago (from the writing of this article) I had a great catch-up with one of my friends on the phone about the tech scene right now. For a few moments, we touched on ChatGPT regarding the good, bad, hype and everything in between of it.
 
-ChatGPT is a chatbot designed and trained by OpenAI. It is powered by OpenAI’s GPT-3 model (a language model that can perform a series of powerful text-based tasks like text translations, summarizations, writing code, among others).  
+After mentioning how frustrating I found the unexpected site crashes due to high global usage, an idea sparked in my mind - “Why depend on the web version when you can create your version of ChatGPT?”💡
 
-- Why create your own version?
 
- I got frustrated over the number of times I got thrown out of the web version due to large number of users accessing it simultaneously
+# What is ChatGPT?🤖
+
+ChatGPT is a chatbot made by OpenAI that can hold conversations with humans. It can perform several tasks like translating text, summarizing articles, writing codes, and many more.
+
+It is powered by OpenAI’s GPT-3 model (a language model that can perform a series of powerful text-based tasks).
+
 
 # Libraries
 
@@ -151,7 +155,7 @@ root_logger.debug('--------------------------------------------------')
 return chatgpt_response["choices"][0]["text"]
 ```
 
-ChatGPT’s response is extracted from the response payload, which is unnested from a nested dictionary and then printed into the Flask app’s frontend interface.   
+ChatGPT’s response is extracted from the JSON payload, which is unnested and then printed into the Flask app’s frontend interface.   
 
 ## D. Loading app
 
@@ -160,12 +164,16 @@ if __name__ == '__main__':
     app.run(debug=True)
 ```
 
-Once all the previous steps in A-C are completed, we can run the app in a dev location. I can access the app using [http://localhost:5000/](http://localhost:5000/) in my browser once I run my script.
+
+Once all the steps in A-C are completed, we can run the app and access it by entering [http://localhost:5000/](http://localhost:5000/) into my URL.
 
 # Conclusion
 
-This is just the starter-pack in getting my custom version of ChatGPT off the ground in the event of another system crash on the web’s preview version. There’s more work to add on the front-end and UX side that is currently on my to-do list. 
+It’s important to note ChatGPT still spits out errors and biases in some of the answers it feeds back to us, so it's still a long way off from replacing certain developer roles or acting as a primary source of reliable information. Nevertheless, it’s hard to ignore the fact it can accelerate the software development process by serving as an excellent co-pilot to developers.
 
-Understanding what tasks ChatGPT shines in will increase your productivity rate as an engineer. ChatGPT is a great co-pilot, but it’s still far from becoming a tool that replaces many developer jobs. But that’s a topic for another day. 
+Developers with technical expertise and domain knowledge are more equipped at delivering solutions faster to end users with ChatGPT than without it. Here's another way to put it - it does a better job of making good engineers great than making average engineers good. But that’s a topic for another day.
 
-Here is the link to my GitHub page that contains the full repository for the code shared:
+It’s likely one of the emerging threats to search engines like Google because of its ability to condense answers to questions in clear and concise sentences without all the hassle of sifting through several links and articles.
+
+This is just the starter pack in getting my custom version of ChatGPT off the ground in the event of another system crash on the web’s preview version. There’s more work to add on the front-end and UX side that is currently on my to-do list. But this can serve as a backup in case ChatGPT goes down again.
+
